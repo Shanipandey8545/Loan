@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+
+    {% include 'loanapp/common/css.html' %}
+    <link rel="stylesheet" href="    {% static 'loanapp/css/style.css' %}">
+
+
+    <style>
+
+li{
+    margin-top: 10px;
+}
+
+.abc:hover{
+    box-shadow: 10px 10px 0px #ff96ad;
+    top: 5px;
+    left: -5px;
+
+
+}
+    </style>
+</head>
+<body >
+    {% include 'loanapp/common/user_header.html' %}
+<form action="/homeloan/" method="post">
+    {% csrf_token %}
+    <div class="row mb-5">
+
+        <div class="loan" style="width: 100%; height: 300px;">
+        <div class="col-5 mt-5" style="margin-left:100px; "><h2 style="font-size:48px; color:rgb(216, 30, 30) ">Home Loan</h2>
+            <h5 style="color:rgb(216, 30, 30)"> Home -- Home Loan</h5>
+        </div>
+        </div>
+        <h2 style="margin-left: 50px;">Home Loan</h2>
+        <p style="margin-left: 50px;">Banks and Housing Finance Companies (HFCs) offer home loans of up to 75% to 90% of the property’s value depending on the credit profiles of their loan applicant, subject to the caps on the LTV ratios set by the lenders and the RBI. The tenure of a home loan can go up to 30 years, depending on the age and repayment capacity of the applicant. At Paisabazaar.com, we help you compare housing loan interest rates and other features offered by top banks and HFCs and apply online for the best option available on your credit profile.</p>
+
+
+
+        <div class="col-5" >
+          <img src="{% static 'loanapp/images/blog1.jpg'%}" alt="" style="width: 100%; height:250px">
+
+        </div>
+
+        
+        <div class="col-7"  style="background-color:antiquewhite; width:50%; border-radius:10px;">
+            <div class="row mb-5">
+         <h3 style="margin-bottom: 20px;">Unlock Best Home Loan Offers From 20+ Lenders</h3> 
+         <div class="col-6 mt-1">
+         <input type="text" class="form-control" name="mobilenumber"required placeholder="Enter mobile number">
+          </div>
+          <div class="col-6">
+
+           <b>Home Loan Type </b><br>
+<input type="radio" name="loantype" id="homeloan" value="homeloan" required >New Home Loan  
+<input type="radio" name="loantype" id="balancetransfer" value="balancetransfer" required style="margin-left: 10px;">Balance Transfer           
+ </div>
+ 
+ 
+
+            <div class="col-6 mt-4">
+                <b>Desired Loan Amount</b><br>
+                <select name="amount" id="amount" style="width:100%; height:35px;" class="rounded">
+                <option value="default">Select Loan Amount</option>
+                <option value="Upto 15 Lacs"><span class="fa fa-star"></span>Upto 15 Lacs</option>
+                <option value="15 Lacs-20 Lacs"><span class="fa fa-star"></span> 15 Lacs-20 Lacs</option>
+                <option value="20 Lacs-30 Lacs"><span class="fa fa-star"></span>20 Lacs-30 Lacs</option>
+                <option value="30 Lacs-50 Lacs"><span class="fa fa-star"></span>30 Lacs-50 Lacs</option>
+                <option value="50 Lacs-75 Lacs"><span class="fa fa-star"></span>50 Lacs-75 Lacs</option>
+                <option value="75 Lacs+"><span class="fa fa-star"></span>75 Lacs+</option>
+
+                
+            </select>
+            </div>
+             <div class="col-6 mt-4" >
+                <b>Property City</b><br>
+                <select name="property" id="property" style="width:90%; height:35px;" class="rounded">
+                <option value="default">Select property city</option>
+                <option value="New Delhi"><span class="fa fa-star"></span>New Delhi</option>
+                <option value="Mumbai"><span class="fa fa-star"></span> Mumbai</option>
+                <option value="Chennai"><span class="fa fa-star"></span>Chennai</option>
+                <option value="Agra"><span class="fa fa-star"></span>Agra</option>
+                <option value="Noida"><span class="fa fa-star"></span>Noida</option>
+                <option value="Lucknow"><span class="fa fa-star"></span>Lucknow</option>
+
+                
+            </select>
+
+            </div>     
+           </div> 
+
+           <button  style="width: 96%; height: 40px; text-align: center; background-color: #2e75e0;"  class="btn mt-4 mb-4 abc"> <b>Submit</b></button>
+
+
+          
+
+    </div>
+            
+           
+    <marquee behavior="" direction=""><u><h2 style="margin-left: 50px; margin-top:30px; color:crimson">Home Loan Eligibility Criteria...</h2></u></marquee>
+    <p style="margin-left: 50px; margin-bottom: 20px;"> Home loan eligibility differs across lending institutions and loan schemes. However, a common set of housing loan<br>
+         eligibility criteria is given below:</p>
+         <ul>
+            <li style="margin-left: 50px;"><b>Nationality:</b> Indian Residents, Non-Resident Indians (NRIs), and Persons of Indian Origin (PIOs)</li>
+            <li style="margin-left: 50px;"><b>Credit Score:</b> Preferably 750 and above</li>
+            <li style="margin-left: 50px;" ><b>Age Limit:</b> 18 – 70 years</li>
+            <li style="margin-left: 50px;"><b>Work Experience:</b> At least 2 years (for salaried)</li>
+            <li style="margin-left: 50px;"><b>Business Continuity:</b> At least 3 years (for self-employed)</li>
+            <li style="margin-left: 50px;"><b>Minimum Salary:</b> At least Rs. 25,000 per month (varies across lenders & locations)</li>
+            <li style="margin-left: 50px;"><b>Loan Amount:</b> Up to 90% of property value</li>
+            
+         </ul>
+         <p style="margin-left: 50px;"><b>Note:</b> Apart from the above parameters, your home loan eligibility also depends on the property you are buying and<br>
+             the location of the property.</p>
+    
+    
+
+         
+
+</div>
+
+
+
+
+</form>
+{% include 'loanapp/common/footer.html' %}
+
+ {%include 'loanapp/common/js.html'%}
+</body>
+</html>

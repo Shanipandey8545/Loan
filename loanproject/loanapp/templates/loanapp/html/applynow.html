@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+    {% include 'loanapp/common/css.html' %}
+    <link rel="stylesheet" href="    {% static 'loanapp/css/style.css' %}">
+
+</head>
+<form action="/applynow/" method="post">
+    {% csrf_token%}
+<body style="background-color: rgb(245, 242, 239);">
+    {% include 'loanapp/common/navbar.html' %}
+
+    
+    <u><h3 style="text-align:center;">Get Started</h3></u>
+    <p style="text-align: center; font-size:20px">Please share a few details to start your application</p>
+
+<div class="col-5 row shadow-lg rounded" style="margin-left:380px;">
+    <div style="margin-top:20px; " >
+       <label for="firstname">First Name</label>
+       <input type="text" class="form-control mb-3" required placeholder=" " name="firstname">
+    </div>
+    <div>
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control mb-3" required placeholder=" " name="lastname">
+     </div>
+     <div>
+        <label for="pincode">Pin Code</label>
+        <input type="tel" class="form-control mb-3" required placeholder=" " name="pincode">
+     </div>
+     <div>
+        <label for="mobilenumber">Mobile Number</label>
+        <input type="tel" class="form-control mb-3" required placeholder=" " name="mobilenumber">
+     </div>
+     <div class="mt-4 mb-5 text-center">
+    
+        <button  style="width: 100%;height: 40px; text-align: center; background-color: #2e75e0;"; class="btn form-control"><b>Submit</b></button>
+    </div>
+
+
+
+</div>
+    
+
+
+
+</form>
+ {%include 'loanapp/common/js.html'%}
+ {% include 'loanapp/common/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+
+    {% include 'loanapp/common/css.html' %}
+    <link rel="stylesheet" href="{% static 'loanapp/css/style.css' %}">
+
+
+    <style>
+
+
+     
+            .ha{
+              font-size: larger;
+              color: red;
+            }
+            table, th,tr{
+                padding: 5px;
+                border: 2px solid black;
+                text-align: center;
+            } 
+
+    </style>
+</head>
+<body >
+    {% include 'loanapp/common/user_header.html' %}
+
+<h4 style="text-align:center; color:rgb(31, 87, 87);  margin-bottom:20px; margin-top:15px;">User Home Page</h4>
+
+    <table class="table" style="margin-top: 5px;">
+
+        </tr>
+       
+          <tr>
+            <th class="ha" scope="col" style="background-color:rgb(160, 165, 221);"> Name:-</th>
+    
+            <th class="ha" scope="col" style="background-color:rgb(224, 229, 229);">EMAIL:-</th>
+            <th class="ha" scope="col" style="width: 30%; background-color: antiquewhite; ">PHONE:-</th>
+            <th class="ha" scope="col" style="background-color: rgb(224, 229, 229);">CITY:-</th>
+            <th class="ha" scope="col" style="background-color: rgb(245, 240, 240);">ADDRESS:-</th>
+    
+          </tr>
+        
+        <tbody>
+    
+           
+            <tr>
+                <th style="color: rgb(0, 0, 0); font-size: larger; background-color:   rgb(160, 165, 221);"> {{user_data.name}}</th>
+    
+                <th style="color: rgb(0, 0, 0); font-size: larger; background-color: rgb(224, 229, 229);width: 15%;"> {{user_data.email}}</th>
+                <th style="width: 30%; background-color: antiquewhite;"> {{user_data.phone}}</th>
+                <th style="background-color: rgb(224, 229, 229);"> {{user_data.city}}</th>
+                <th style="background-color: rgb(245, 240, 240);">  {{user_data.address}}</th>
+               
+    
+            
+            
+            </tr>
+    
+    
+         
+        </tbody>
+      </table>
+    
+    
+
+
+
+
+
+
+
+
+            
+        
+        
+        
+           
+
+
+{% include 'loanapp/common/footer.html' %}
+
+ {%include 'loanapp/common/js.html'%}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

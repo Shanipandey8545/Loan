@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+
+    {% include 'loanapp/common/css.html' %}
+    <link rel="stylesheet" href="{% static 'loanapp/css/style.css' %}">
+
+
+    <style>
+
+li{
+    margin-top:10px;
+}
+div h6{
+    color: brown;
+    float:left;
+    
+}
+.abc:hover{
+    box-shadow: 10px 10px 0px #ff96ad;
+    top: 5px;
+    left: -5px;
+
+
+}
+    </style>
+</head>
+<body >
+  {% include 'loanapp/common/user_header.html' %}
+  <form action="/buisnessloan/" method="post">
+    {% csrf_token %}
+    <div class="row mb-5">
+
+        <div class="buisness" style="width: 100%; height: 300px;">
+        <div class="col-5 mt-5 " style="margin-left:100px;"><h2 style="font-size:48px; color:rgb(216, 30, 30)">Buisness Loan</h2>
+            <h5 style="color:rgb(216, 30, 30)"> Home -- Buisness Loan</h5>
+        </div>
+        
+        </div>
+        <div class="col-12 mt-0" style="background-color:rgb(230, 208, 208); ">
+          <marquee> <h6 style="margin-left:50px;  ">Home--Buisness Loan</h6>
+            <h6 style=" margin-left:500px;">Eligibility Check</h6>
+            <h6 style="margin-left:30px; ">Great Offers</h6>
+            <h6 style=" margin-left:30px">e-approvals</h6></marquee> 
+
+           <u> <h2 style="text-align: center;">Apply For Buisness Loan</h2></u>
+<div class="col-8 row shadow_lg rounded mb-5" style="margin-left: 15%; background-color:aquamarine">
+
+    
+        
+    <div class="col-md-5 mt-3" style="margin-left: 9%;">
+        <b><label for="name" class="form-label">Name?</label></b>
+        <input type="text" class="form-control" name="name"  placeholder="enter your name"required>
+       
+      </div>
+
+      <div class="col-md-5 mt-3">
+        <b> <label for="city" class="form-label">City</label></b>
+         <input type="text" class="form-control" name="city" placeholder="enter city" required>
+       </div>
+        
+              <div class="col-md-5 mt-3" style="margin-left: 9%;">
+                <b><label for="amount" class="form-label">Your desired loan amount?</label></b>
+                <input type="text" class="form-control" name="amount"  placeholder="xxxxxxxx"required>
+               
+              </div>
+        
+        
+        
+              <div class="col-md-5 mt-3">
+                <b>How are you currently employed?</b><br>
+                <select name="employed"  style="width:100%; height:35px;" class="rounded">
+                <option value="default">Select your loan employement</option>
+                <option value="self employed buisness"><span class="fa fa-star"></span> self employed buisness</option>
+                <option value="self employed professinal"><span class="fa fa-star"></span> self employed professional</option>
+                
+
+                
+            </select>
+              </div>
+        
+        
+              <div class="col-md-5 mt-4"style="margin-left: 9%;">
+                <b>Your gross annual sales / turnover?</b><br>
+                <select name="turnover"  style="width:100%; height:35px;" class="rounded">
+                <option value="default">Select turnover </option>
+                <option value="Upto 15 Lacs"><span class="fa fa-star"></span>Upto 15 Lacs</option>
+                <option value="15 Lacs-20 Lacs"><span class="fa fa-star"></span> 15 Lacs-20 Lacs</option>
+                <option value="20 Lacs-30 Lacs"><span class="fa fa-star"></span>20 Lacs-30 Lacs</option>
+                <option value="30 Lacs-50 Lacs"><span class="fa fa-star"></span>30 Lacs-50 Lacs</option>
+                <option value="50 Lacs-75 Lacs"><span class="fa fa-star"></span>50 Lacs-75 Lacs</option>
+                <option value="75 Lacs+"><span class="fa fa-star"></span>75 Lacs+</option>
+
+                
+            </select>
+              </div>
+        
+              <div class="col-md-5 mt-3">
+               <b> <label for="phone" class="form-label">Mobile Number?</label></b>
+                <input type="tel" class="form-control" name="mobilenumber"  placeholder="enter mobile number" required>
+              </div>
+        
+        
+             
+        
+        
+        
+              
+        
+        
+        
+                            
+        
+          <div class="mt-4 mb-5 text-center col-md-10" style="margin-left: 9%;">
+            
+                <button  style="width: 100%;height: 40px; text-align: center; background-color: white;" class="btn form-control abc"> <b>Submit</b></button>
+            </div>
+        
+        
+        
+        
+          </div>
+</div>
+
+          
+         </div>
+            
+           
+    
+
+
+
+</form>
+{% include 'loanapp/common/footer.html' %}
+
+ {%include 'loanapp/common/js.html'%}
+</body>
+</html>

@@ -1,0 +1,58 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+    {% include 'loanapp/common/css.html' %}
+<link rel="stylesheet" href="    {% static 'loanapp/css/style.css' %}">
+   
+
+</head>
+<body>
+    {% include 'loanapp/common/navbar.html' %}
+<div class="row">
+
+<div class="h row" style="width: 100%; height: 300px;">
+<div class="col-4" style="margin-left:100px; "><h2 style="font-size:48px;  ">Loanpao.com Best Loan Offers</h2>
+</div>
+</div>
+
+<div class="col-12 mt-3" >
+    <marquee behavior="" direction=""><h4 style="color:red">LOAN WE OFFER FOR YOU -----</h4></marquee>
+
+<div class="col-5" style="float: left;">
+
+
+    <b><p style="font-size:25px;">You can compare your loan and apply online here</p></b>
+
+</div>
+<div class="col-6" style="float: left; margin-left:50px;">
+
+    <p>Avail home loans up to Rs.10 crore with interest rates starting at 6.90% p.a. with additional benefits such as extended loan terms and flexible repayment options. Simple documentation, quick processing, and excellent customer service with a response time.</p>
+
+</div>
+</div>
+
+<div class="col-12 mt-3" >
+    <div class="a col-4" style="float: left; height:400px; margin-left:30px; ">
+          <marquee behavior="" direction=""> <h2 style="margin-top:350px; color:red">PERSONAL LOAN</h2></marquee>
+    </div>
+<div class="b col-3" style="float: left; height:400px; margin-left:50px; ">
+           <marquee behavior="" direction=""><h2 style="margin-top:350px; color:red">CAR LOAN</h2></marquee>
+</div>
+    <div class="c col-3" style="float: left; height:400px; margin-left:50px; ">
+          <marquee behavior="" direction=""> <h2 style="margin-top:350px; color:red">BUISNESS LOAN</h2></marquee>
+    </div>
+
+</div>
+
+</div>
+    {% include 'loanapp/common/footer.html' %}
+    {% include 'loanapp/common/js.html' %}
+
+
+</body>
+</html>

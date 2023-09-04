@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+
+    {% include 'loanapp/common/css.html' %}
+    <link rel="stylesheet" href="{% static 'loanapp/css/style.css' %}">
+
+
+    <style>
+        h4:hover{
+            color: brown;
+        }
+
+    </style>
+</head>
+<body style="background-color: aliceblue;">
+    {% include 'loanapp/common/user_header.html' %}
+
+
+        <div class="blogs row" style="width: 100%; height: 300px;">
+        <div class="col-3 mt-5" style="margin-left:100px; "><h2 style="font-size:48px; color:white ">Blog</h2>
+            <h5 style="color:white"> Home -- Blog</h5>
+        </div>
+        </div>
+
+
+
+        
+            
+              <u> <h2 style="text-align:center; margin-top:20px; color:red;">-Latest News -</h2></u> 
+               <h3 style="text-align:center">We're here to share latest news....</h3> 
+
+<div class=" row col-12" style="margin-top: 40px; ">
+    <div class="col-3 shadow-lg" style="float: left;  margin-left:80px; background-color: white; border-radius:10px; ">
+        <img src="{% static 'loanapp/images/blog1.jpg'%}" alt="" style="width: 100%; height:200px; ">
+    <b>
+        <h4>This bank have increased home loan interest rates after the RBI repo hike</h4></b>
+      
+    <p>In an effort to fight inflation, the Reserve Bank of India (RBI) raised the repo rate once more.</p>
+
+
+</div>
+
+<div class=" col-3 shadow-lg" style="float: left; margin-left:80px; background-color: white; border-radius:10px;  ">
+   
+    <img src="{% static 'loanapp/images/blog2.jpg'%}" alt="" style="width: 100%; height:200px; border-radius:10px; ">
+    <b><h4>SBI hikes home loans interest rate by 50 bps: How much your EMI will increase</h4></b>
+    <p>The Reserve Bank of India (RBI) has hiked the policy rates for the fifth time during this financial year.</p>
+</div>
+
+<div class=" col-3" style="float: left; margin-left:80px; background-color: white; border-radius:10px; ">
+    <img src="{% static 'loanapp/images/blog3.jpg'%}" alt="" style="width: 102%; height:200px;">
+    <b><h4>Bank of Baroda, Bank of India hike home loan interest rates: Check details here</h4></b>
+    <p>Keeping up with the hike in repo rate announced by the Reserve Bank of India in the fifth</p>
+
+</div>
+</div>
+<div class=" row col-12" style="margin-top: 50px; ">
+    <div class="col-3 shadow-lg" style="float: left;  margin-left:80px; background-color: white; border-radius:10px; ">
+        <img src="{% static 'loanapp/images/blog8.jpg'%}" alt="" style="width: 100%; height:200px; ">
+    <b>
+        <h4>Hikes home loan RBL Bank, other loan interest rates:Check new rates</h4></b>
+      
+    <p>In an effort to fight inflation, the Reserve Bank of India (RBI) raised the repo rate once more.</p>
+
+
+</div>
+
+<div class=" col-3 shadow-lg" style="float: left; margin-left:80px; background-color: white; border-radius:10px;  ">
+   
+    <img src="{% static 'loanapp/images/blog7.jpg'%}" alt="" style="width: 100%; height:200px; border-radius:10px; ">
+    <b><h4>Increase home loan interest rate LIC housing Finance</h4></b>
+    <p>LHPLR is the benchmark rate to which the interest rate on LIC HFL’s loans is linked.</p>
+</div>
+
+<div class=" col-3" style="float: left; margin-left:80px; background-color: white; border-radius:10px; ">
+    <img src="{% static 'loanapp/images/loan3.jpg'%}" alt="" style="width: 102%; height:200px;">
+    <b><h4>What are the diffrent types of loans</h4></b>
+    <p>Auto loans are used to buy cars and are medium-term loans with a moderate rate</p>
+
+</div>
+</div>
+
+
+              
+<button class="btn btn-outline-primary" type="submit" href="#" style="margin-top: 40px; margin-left:500px;" ><<-Previous</button>
+<button class="btn btn-outline-primary" type="submit" href="#" style="margin-top: 40px;margin-left:10px; " >1</button>
+<button class="btn btn-outline-primary" type="submit" href="#" style="margin-top: 40px;" >2</button>
+<button class="btn btn-outline-primary" type="submit" href="#" style="margin-top: 40px;" >3</button>
+<button class="btn btn-outline-primary" type="submit" href="#" style="margin-top: 40px; margin-left:10px;"  >Next->></button>
+
+
+
+
+ {%include 'loanapp/common/js.html'%}
+ {% include 'loanapp/common/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>loanportal</title>
+
+    {% include 'loanapp/common/css.html' %}
+    <link rel="stylesheet" href="    {% static 'loanapp/css/style.css' %}">
+
+
+    <style>
+        .abc:hover{
+            box-shadow: 10px 10px 0px #ff96ad;
+            top: 5px;
+            left: -5px;
+        
+        
+        }
+
+    </style>
+</head>
+<body>
+    {% include 'loanapp/common/navbar.html' %}
+<form action="/contactus/" method="post">
+    {% csrf_token %}
+    <div class="row">
+
+        <div class="d row" style="width: 100%; height: 300px;">
+        <div class="col-5 mt-5" style="margin-left:100px; "><h2 style="font-size:48px; color:white ">Countact Us</h2>
+            <h5 style="color:white"> Home -- Contact Us</h5>
+        </div>
+        </div>
+
+        
+            
+           
+    <div class="col-12 mt-3" style="margin-left:50px;" >
+        <h5>Contact Us</h5>
+    </div>
+
+    
+    <div class="col-5" style="float: left;">
+    
+    
+        <b><p style="font-size:25px;">Help your team what you are seeking to achieve</p></b>
+    
+    </div>
+
+
+    <div class="col-6 shadow-lg rounded " style="background-color: white; text-shadow: rgb(171, 11, 11); text-align: center;">
+
+       <u> <h2 class="mt-4"> Contact Us</h2></u>
+        <div class="col">
+            <input type="text" class="form-control mt-4" required placeholder="Enter your name" name="name">
+            
+          </div>
+
+          <div class="col">
+            <input type="tel" class="form-control mt-4" required placeholder="Enter your phone number" name="phone">
+           
+        </div>
+
+
+
+
+          <div class="col">
+            <input type="email" class="form-control mt-4" required placeholder="Enter your email address" name="email">
+            
+
+          </div>
+
+          <div class="col mt-4 ">
+            <textarea name="message" class="form-control" id="message" cols="76" rows="3" required placeholder="Massege"></textarea>
+            
+
+            <div class="mt-4 mb-5 text-center">
+    
+                <button  style="width: 100%;height: 40px; text-align: center; background-color:green;" class="btn form-control abc"> <b>Submit</b></button>
+            </div>
+
+
+
+</div>
+</div>
+
+</div>
+
+
+</form>
+{% include 'loanapp/common/footer.html' %}
+
+ {% include 'loanapp/common/js.html' %}
+</body>
+</html>

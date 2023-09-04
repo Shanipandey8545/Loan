@@ -1,0 +1,86 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+
+    {% include 'loanapp/common/css.html' %}
+    <style>
+
+.toggle{
+background: none;
+border: none;
+color: #337ab7;
+font-weight: 600;
+position: absolute;
+right: 0rem;
+top: 1rem;
+
+}
+
+.abc:hover{
+    box-shadow: 10px 10px 0px #ff96ad;
+    top: 5px;
+    left: -5px;
+
+
+}
+
+    </style>
+</head>
+<body style="background-color: rgb(151, 143, 143);">
+
+    {% include 'loanapp/common/navbar.html' %}
+
+    <form class="needs-validation" novalidate method="post" action="/user_login/">
+      {%csrf_token%}
+       
+        <h2 style="text-align: center; color: rgb(31, 99, 63); margin-top: 3%;" class="mb-3">User Login Page</h2>   
+
+        <div class="row mt-5">
+
+                <div class="col-4 ">
+    
+                </div>
+    
+            <div class="col-4 shadow_lg rounded mb-5" style="background-color:rgb(228, 224, 224);">
+              <label for="id" class="mb-2" style="color: black; font-size: large;"> ID</label>      
+               <div class=" mb-3 form-floating ">
+             <input type="text" class="form-control" id="id" name="id" required placeholder="Enter your id">
+             <label for="id" class="form-label">id </label>
+            
+             
+          </div>
+          <label for="name" class="mb-2" style="color: black; font-size: large;">Password</label>      
+    
+          <div class="mb-3 form-floating ">
+    
+            <input type="password" class="form-control" id="password" required name="password" placeholder="Enter your password" >
+            <button type="button" id="btnToggle" class="toggle">
+              <i class="fa fa-eye" id="eyeIcon"></i> 
+    
+            </button>
+            <label for="password" class="form-label">Password</label>
+            
+            
+            
+           </div>
+         <div class="text-center mb-3">
+            <button class="btn btn-success form-control abc">Submit</button>
+    
+    
+         </div>
+          </div>
+        </div>
+    
+    </form>
+
+    {%include 'loanapp/common/js.html'%}
+    {% include 'loanapp/common/footer.html' %}
+
+
+</body>
+</html>

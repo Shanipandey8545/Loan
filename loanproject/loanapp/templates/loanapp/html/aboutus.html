@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+
+    {% include 'loanapp/common/css.html' %}
+    <link rel="stylesheet" href="{% static 'loanapp/css/style.css' %}">
+
+
+    <style>
+
+
+    </style>
+</head>
+<body>
+    {% include 'loanapp/common/navbar.html' %}
+
+    <div class="row">
+
+        <div class="b row" style="width: 100%; height: 300px;">
+        <div class="col-5" style="margin-left:20px; margin-top:100px; "><h3 style="font-size:35px; color:red ">About Us</h3>
+            <h5 style="color:red"> Home -- About Us</h5>
+        </div>
+        </div>
+
+        
+            
+            <div class="col-12 mt-3" style="margin-left:50px;" >
+                 <marquee behavior="" direction=""><h5 style="color:red;">-MISSION, VISION & VALUES-</h5></marquee>
+            
+            <div class="col-5" style="float: left;">
+            
+            
+                <b><p style="font-size:25px;">Help your team what you are seeking to achieve</p></b>
+            
+            </div>
+            <div class="col-6" style="float: left; margin-left:50px;">
+            
+                <p>Advances at appealing financing costs with higher credit qualification and lower EMI. credit is the loaning of cash by at least one people, associations, or different substances to others, associations. Apply now to get snappy endorsement of best advance administrations..</p>
+            
+            </div>
+         </div>
+    </div>
+         <div class="col-4" style="background-color: rgb(220, 170, 77);  margin-left:50px; height:150px;">
+            <h4 style="margin-left:10px;">Our Mission</h4>
+             <p class="mb-5" style="margin-bottom: 3%; margin-left:10px;">Our company is single-minded in its determination to achieve excellence in all that we do. We are dedicated to achieving the highest standards in the areas of FINANCE</p>
+
+
+        </div>
+
+        <div class="col-4" style="background-color:antiquewhite;  margin-left:50px; height:150px; margin-top:20px">
+            <h4 style="margin-left:10px;">Our Vision</h4>
+             <p class="mb-5" style="margin-bottom: 4%; margin-left:10px;">We aim to be one of the most trusted names in Loan that offers convenient and affordable financial solutions to all, in an inclusive and sustainable manner with a PAN India presence and eventually a global presence.</p>
+
+
+        </div>
+        <div class="col-4" style="background-color: rgb(220, 170, 77);  margin-left:50px; height:150px; margin-top:20px">
+            <h4 style="margin-left:10px;">Our Values</h4>
+             <p class="mb-5" style="margin-bottom: 3%; margin-left:10px;">To our customers, we are committed to providing quality services that consistently represent an exceptional value and result in high customer satisfaction.</p>
+
+
+        </div>
+        
+    
+ {%include 'loanapp/common/js.html'%}
+ {% include 'loanapp/common/footer.html' %}
+</body>
+</html>

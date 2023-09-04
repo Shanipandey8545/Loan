@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanportal</title>
+
+    {% include 'loanapp/common/css.html' %}
+    <link rel="stylesheet" href="{% static 'loanapp/css/style.css' %}">
+
+
+    <style>
+
+li{
+    margin-top:10px;
+}
+
+.abc:hover{
+    box-shadow: 10px 10px 0px #ff96ad;
+    top: 5px;
+    left: -5px;
+
+
+}
+    </style>
+</head>
+<body >
+    {% include 'loanapp/common/user_header.html' %}
+<form action="/personalloan/" method="post">
+    {% csrf_token %}
+    <div class="row mb-5">
+
+        <div class="personal3" style="width: 100%; height: 300px;">
+        <div class="col-5 mt-5" style="margin-left:100px; "><h2 style="font-size:48px; color:rgb(216, 30, 30) ">Personal Loan</h2>
+            <h5 style="color:rgb(216, 30, 30)"> Home -- Personal Loan</h5>
+        </div>
+        </div>
+        <h2 style="margin-left: 50px;"> Personal Loan</h2>
+        <p style="margin-left: 50px;">Personal loan offers from 30+ banks and NBFCs to cater to diverse consumer segments. This allows consumers to compare the key loan features offered by top lenders and then, apply for the best option available on their credit profiles. We have also entered into special partnerships with several banks and NBFCs to offer pre-approved/pre-qualified personal loans with end-to-end digital processing and instant disbursal..</p>
+
+
+
+        <div class="col-3" style="margin-left:50px;" >
+          <img src="{% static 'loanapp/images/personal.webp'%}" alt="" style="width: 100%; height:250px; ">
+
+        </div>
+
+        
+        <div class="col-8"  style="background-color:antiquewhite; ">
+            <div class="row mb-5">
+         <h3 style="margin-bottom: 20px;">Unlock Best Home Loan Offers From 20+ Lenders</h3> 
+         <div class="col-6 mt-4">
+         <input type="text" class="form-control" name="mobilenumber"required placeholder="Enter mobile number">
+          </div>
+          <div class="col-6 mt-4">
+
+           <b>Employee Type </b><br>
+<input type="radio" name="employeetype" id="salaried" value="salaried" required >Salaried  
+<input type="radio" name="employeetype" id="selfsalaried" value="selfsalaried" required style="margin-left: 40px;">Self Salaried          
+ </div>
+ 
+ 
+
+           
+           </div> 
+
+           <button  style="width: 96%; height: 40px; text-align: center; background-color: #2e75e0;"  class="btn mt-4 mb-4  abc"> <b>Submit</b></button>
+
+
+          
+
+    </div>
+            
+           
+    <marquee behavior="" direction=""><u><h2 style="margin-left: 50px; margin-top:30px; color:crimson">Personal Loan Eligibility Criteria...</h2></u></marquee>
+    
+         <ul>
+            <li style="margin-left: 50px;"><b>Age:</b> 18 – 60 years</li>
+            <li style="margin-left: 50px;"><b>Salary</b>  At least Rs. 15,000 per month for salaried customers</li>
+            <li style="margin-left: 50px;" ><b>Income:</b> At least Rs. 5 lakh p.a. for self-employed customers</li>
+            <li style="margin-left: 50px;"><b>Credit Score:</b>  Preferably 750 and above as having higher credit scores improve chances of loan approva</li>
+            <li style="margin-left: 50px;"><b>Employment Stability:</b> At least 2 years with a minimum 1 year of work experience in the same job for salaried</li>
+            <li style="margin-left: 50px;"><b>Business Continuity:</b> At least 2 years of business continuity for self-employed professionals</li>
+            <li style="margin-left: 50px;"><b>Employment Type</b> Salaried employees working with reputed organisations, MNCs, Private and Public Limited<br>
+                 Companies, Govt. organisations, PSUs, and large enterprises</li>
+            
+         </ul>
+         
+
+         
+
+</div>
+
+
+
+
+</form>
+{% include 'loanapp/common/footer.html' %}
+
+ {%include 'loanapp/common/js.html'%}
+</body>
+</html>
